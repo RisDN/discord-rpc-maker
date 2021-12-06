@@ -34,6 +34,7 @@ function start() {
 
     ablak.removeMenu()
     ablak.loadURL("http://localhost:3325")
+    ablak.webContents.openDevTools()
 
     setTimeout(function() {
         betolto.close()
