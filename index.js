@@ -6,7 +6,7 @@ szerverStart()
 
 let ablak, betolto
 app.on("ready", () => start())
-app.setAppUserModelId('Discord Rich Presence Maker')
+app.setAppUserModelId('Tesztlap+')
 
 
 function start() {
@@ -14,7 +14,7 @@ function start() {
     betolto = new BrowserWindow({
         width: 500,
         height: 400,
-        title: "Discord Rich Presence Maker",
+        title: "Tesztlap+ betöltés...",
         resizable: false,
         frame: false,
         show: true
@@ -26,7 +26,7 @@ function start() {
     ablak = new BrowserWindow({
         width: 600,
         height: 500,
-        title: "Discord Rich Presence Maker",
+        title: "Tesztlap+",
         resizable: false,
         frame: false,
         show: false
