@@ -10,7 +10,6 @@ app.setAppUserModelId('Tesztlap+')
 
 
 function start() {
-
     betolto = new BrowserWindow({
         width: 500,
         height: 400,
@@ -19,7 +18,6 @@ function start() {
         frame: false,
         show: true
     })
-
     betolto.removeMenu()
     betolto.loadFile(path.join(__dirname, "/public/load.html"))
 
@@ -29,9 +27,13 @@ function start() {
         title: "Tesztlap+",
         resizable: false,
         frame: false,
-        show: false
+        show: false,
+        webPreferences: { 
+            nodeIntegration: true, 
+            contextIsolation: false,
+            enableRemoteModule: true
+        } 
     })
-
     ablak.removeMenu()
     ablak.loadURL("http://localhost:3325")
     ablak.webContents.openDevTools()
@@ -40,7 +42,4 @@ function start() {
         betolto.close()
         ablak.show()
     }, 3500)
-
-
-
 }
